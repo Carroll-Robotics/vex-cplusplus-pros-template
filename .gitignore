@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# PROS build artifacts
+bin/
+firmware/
+*.a
+*.o
+*.d
+*.exe
+*.elf
+*.out
