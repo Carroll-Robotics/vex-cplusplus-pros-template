@@ -6,8 +6,14 @@
 
   // run once after the container starts
   "postCreateCommand": [
-    "pros --version"          // fail early if PROS CLI is missing
+  // 👉 If we're in Codespaces *and* no real vexcom is present,
+  //    create a 1‑line stub on /usr/local/bin so the extension is happy.
+  "bash -c 'if [ \"$CODESPACES\" = \"true\" ] && ! command -v vexcom >/dev/null; then printf \"#!/usr/bin/env bash\\necho \\\"vexcom 0.0.0 (stub for Codespaces)\\\"\\n\" > /usr/local/bin/vexcom && chmod +x /usr/local/bin/vexcom; fi'",
+
+    // 2 ▪ sanity‑check that PROS CLI is installed
+    "pros --version"
   ],
+
 
   "customizations": {
     "vscode": {
