@@ -106,6 +106,62 @@ Docs & examples are welcome — feel free to improve this README!
 
 ## 👨‍💻 Maintainers
 
-Template maintained by `Carroll Robotics`.
+Template maintained by `<your‑name or organisation>`.
 
-Questions? Open an [issue](https://github.com/<your-org>/<repo>/issues) or email `<web-master@carroll-robotics.com>`.
+Questions? Open an [issue](https://github.com/<your-org>/<repo>/issues) or email `<contact@your-org.com>`.
+
+---
+
+## 🔄 Why Use Pull Requests?
+
+Pull Requests (PRs) are how we:
+
+- ✅ Propose changes for review before they’re merged into the main codebase  
+- 🔍 Collaborate by leaving comments, suggestions, and approvals  
+- 🧪 Ensure code compiles and runs correctly before going live  
+- 🧼 Keep the `main` branch clean and working for everyone  
+
+Even if you’re the only developer, PRs help track changes and spot mistakes early.
+
+---
+
+## 📥 How to Make a Pull Request (Step-by-Step)
+
+1. **Create a new branch** for your changes:
+
+   ```bash
+   git checkout -b feature/my-cool-change
+   ```
+
+2. **Make your changes** in VS Code or your preferred editor.
+
+3. **Stage and commit** your changes:
+
+   ```bash
+   git add .
+   git commit -m "Describe what you changed"
+   ```
+
+4. **Push** your branch to GitHub:
+
+   ```bash
+   git push -u origin feature/my-cool-change
+   ```
+
+5. **Open a Pull Request**:
+
+   - Go to the repo on GitHub  
+   - Click **Compare & pull request**  
+   - Add a title and description  
+   - Click **Create pull request**
+
+6. **Wait for review or test it yourself**, then **merge** it when ready.
+
+---
+
+## 🧠 Best Practices for PRs
+
+- 📋 Keep PRs small and focused on one thing  
+- ✍️ Use clear commit messages and PR titles  
+- 🔍 Review your own code before asking others  
+- ✅ Only merge if `pros build` passes
