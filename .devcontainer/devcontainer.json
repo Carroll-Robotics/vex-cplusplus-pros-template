@@ -1,0 +1,27 @@
+{
+  "name": "VEX‑PROS Dev Container",
+
+  // build context (unchanged)
+  "build": { "dockerfile": "Dockerfile" },
+
+  // run once after the container starts
+  "postCreateCommand": [
+    "pros --version"          // fail early if PROS CLI is missing
+  ],
+
+  "customizations": {
+    "vscode": {
+      // ✔ VS Code extensions that will auto‑install in the container
+      "extensions": [
+        "sigbots.pros",
+        "ms-vscode.cpptools-extension-pack"
+      ],
+
+      // ✔ VS Code user/workspace settings
+      "settings": {
+        // Tell the MS C/C++ extension to use PROS' configuration provider
+        "C_Cpp.default.configurationProvider": "sigbots.pros"
+      }
+    }
+  }
+}

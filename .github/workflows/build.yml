@@ -1,0 +1,20 @@
+name: PROS C++ Build Check
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    - run: |
+        pip install pros-cli
+        sudo apt-get install -y gcc-arm-none-eabi libstdc++-arm-none-eabi-newlib
+    - run: pros build
