@@ -38,12 +38,12 @@ This template includes [EZ-Template](https://ez-robotics.github.io/EZ-Template/)
 
 ## 📁 Project Layout
 
-| Path / File              | Purpose                                   |
-|--------------------------|-------------------------------------------|
-| `src/autons.cpp`         | Autonomous period routine                 |
-| `src/main.cpp`           | Driver‑control loop                       |
-| `include/config.hpp`     | All ports & global devices declared here  |
-| `build/` & `bin/`        | Auto‑generated artifacts (safe to delete) |
+| Path / File              | Purpose                                    |
+|--------------------------|--------------------------------------------|
+| `src/autons.cpp`         | Autonomous period routine                  |
+| `src/main.cpp`           | Driver‑control loop                        |
+| `include/config.hpp`     | All ports & global devices declared here   |
+| `build/` & `bin/`        | Auto‑generated artifacts (safe to delete)  |
 
 _Skeleton generated with `pros conduct new --skeleton adv`._
 
@@ -111,9 +111,9 @@ Docs & examples are welcome — feel free to improve this README!
 
 ## 👨‍💻 Maintainers
 
-Template maintained by `<your‑name or organisation>`.
+Template maintained by `Carroll-Robotics`.
 
-Questions? Open an [issue](https://github.com/<your-org>/<repo>/issues) or email `<contact@your-org.com>`.
+Questions? Open an [issue](https://github.com/Carroll-Robotics/<repo>/issues) or email `web-master@carrollrobotics.com`.
 
 ---
 
