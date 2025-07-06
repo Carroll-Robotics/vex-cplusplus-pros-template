@@ -1,32 +1,38 @@
-# 📦 VEX V5 PROS C++ Codespace Template
+# 📦 VEX V5 PROS C++ Template with EZ-Template
 
-A zero‑install starter repo for coding VEX V5 robots in C++ with PROS inside GitHub Codespaces.
-
-The container ships with:
-
-- **PROS CLI 3.5.5 + Kernel 4.2.x**
-- **Arm GNU Toolchain 13.3** (matches the kernel)
-- **Pre‑installed VS Code extensions**:  
-  - [PROS Extension](https://marketplace.visualstudio.com/items?itemName=sigbots.pros)  
-  - [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
-
-> 💡 No local software required—just a browser and a GitHub account.
+This template includes [EZ-Template](https://ez-robotics.github.io/EZ-Template/) for easier autonomous and drive programming in VEX V5 PROS C++ projects.
 
 ---
 
-## 🚀 Quick Start (≈ 60 seconds)
+## 🚀 Quick Start (Local, No Container)
 
-1. **Fork** this repo to your GitHub account.  
-2. Click **Code → Codespaces → Create codespace on main**.  
-   A browser‑based VS Code window opens; the container builds in ~2 minutes.
-3. In the terminal run:
-
+1. **Install PROS CLI and Toolchain**
+   - [PROS Getting Started Guide](https://pros.cs.purdue.edu/v5/getting-started/index.html)
+   - Or, in your terminal:
+     ```bash
+     pip3 install pros-cli
+     pros conduct env install
+     ```
+2. **Clone this repository**
    ```bash
-   pros build                # compile
-   pros simulate --open      # optional: open the built‑in sim
+   git clone <your-repo-url>
+   cd <your-repo-folder>
    ```
+3. **Build the project**
+   ```bash
+   make
+   ```
+4. **Flash to your V5 Brain**
+   - Use `pros upload bin/hot.package.elf` (USB) or copy `bin/hot.package.bin` to SD card as `program.bin`.
 
-4. Edit files in `src/` and `include/` — autocomplete & linting are ready.
+---
+
+## 🤖 EZ-Template
+
+- Official docs: [https://ez-robotics.github.io/EZ-Template/](https://ez-robotics.github.io/EZ-Template/)
+- Example drive and autonomous code is already included in `src/main.cpp`.
+- Configure your drive and IMU ports in the drive constructor at the top of `main.cpp`.
+- For advanced features (tracking wheels, auton selector, etc.), see the [EZ-Template tutorials](https://ez-robotics.github.io/EZ-Template/tutorials/).
 
 ---
 
