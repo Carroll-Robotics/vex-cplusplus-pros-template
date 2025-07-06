@@ -38,12 +38,11 @@ This template includes [EZ-Template](https://ez-robotics.github.io/EZ-Template/)
 
 ## 📁 Project Layout
 
-| Path / File              | Purpose                             |
-|--------------------------|-------------------------------------|
-| `src/initialize.cpp`     | Runs once at boot/reset             |
-| `src/autonomous.cpp`     | Autonomous period routine           |
-| `src/opcontrol.cpp`      | Driver‑control loop                 |
-| `include/config.hpp`     | All ports & global devices declared here |
+| Path / File              | Purpose                                   |
+|--------------------------|-------------------------------------------|
+| `src/autons.cpp`         | Autonomous period routine                 |
+| `src/main.cpp`           | Driver‑control loop                       |
+| `include/config.hpp`     | All ports & global devices declared here  |
 | `build/` & `bin/`        | Auto‑generated artifacts (safe to delete) |
 
 _Skeleton generated with `pros conduct new --skeleton adv`._
