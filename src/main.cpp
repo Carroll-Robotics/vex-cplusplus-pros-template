@@ -257,6 +257,16 @@ void opcontrol() {
     // Put more user control code here!
     // . . .
 
+
+    // Example of setting the intake motors to a specific power
+    if (master.get_digital(DIGITAL_L1)) {
+      setIntake(127);  // Set the intake to 100% power
+    } else if (master.get_digital(DIGITAL_L2)) {
+      setIntake(-127);  // Set the intake to -100% power
+    } else {
+      setIntake(0);  // Stop the intake
+    }
+
     pros::delay(ez::util::DELAY_TIME);  // This is used for timer calculations!  Keep this ez::util::DELAY_TIME
   }
 }

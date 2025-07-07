@@ -47,6 +47,9 @@
 #include "autons.hpp"
 #include "subsystems.hpp"
 
+#include "globals.hpp"  // Include globals after autons and subsystems so that we can use the macros defined in them
+#include "helpers.hpp"  // Include helpers so that we can use the macros defined in it
+
 
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do
