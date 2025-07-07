@@ -35,6 +35,7 @@
 #define PROS_USE_LITERALS
 
 #include "api.h"
+
 /**
  * You should add more #includes here
  */
@@ -45,6 +46,7 @@
 // More includes here...
 #include "autons.hpp"
 #include "subsystems.hpp"
+
 #include "globals.hpp"  // Include globals after autons and subsystems so that we can use the macros defined in them
 #include "helpers.hpp"  // Include helpers so that we can use the macros defined in it
 

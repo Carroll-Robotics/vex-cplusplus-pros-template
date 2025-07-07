@@ -257,6 +257,7 @@ void opcontrol() {
     // Put more user control code here!
     // . . .
 
+
     // Example of setting the intake motors to a specific power
     if (master.get_digital(DIGITAL_L1)) {
       setIntake(127);  // Set the intake to 100% power
