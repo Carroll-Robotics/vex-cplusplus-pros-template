@@ -1,4 +1,44 @@
-# 📦 VEX V5 PROS C++ Codespace Template
+# 📦 VEX V5 PROS C++ Template## 🚀 Quick Start
+
+### Prerequisites
+
+1. **Install PROS CLI** - Follow the [offiial installation guide](https://pros.cs.purdue.edu/v5/getting-started/)
+2. **Install VS Code** (optional but recommended)
+3. **Clone or fork** this repository
+
+### Getting Started
+
+1. **Clone** this repo to your local machine:
+   ```bash
+   git clone <your-repo-url>
+   cd <repo-name>
+   ```
+
+2. **Build the project**:
+   ```bash
+   pros build
+   ```
+
+3. **Flash to robot** (connect V5 brain via USB):
+   ```bash
+   pros upload
+   ```
+
+4. **Open in VS Code** for development:
+   ```bash
+   code .
+   ```emplate for coding VEX V5 robots in C++ with PROS.
+
+This template includes:
+
+- **PROS project structure** with EZ-Template integration
+- **Pre-configured build system** (Makefile)
+- **GitHub Actions workflow** for automated builds
+- **Recommended VS Code extensions**:  
+  - [PROS Extension](https://marketplace.visualstudio.com/items?itemName=sigbots.pros)  
+  - [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
+
+> 💡 Requires local PROS CLI installation for development and flashing.ROS C++ Codespace Template
 
 A zero‑install starter repo for coding VEX V5 robots in C++ with PROS inside GitHub Codespaces.
 
@@ -34,13 +74,41 @@ The container ships with:
 
 | Path / File              | Purpose                             |
 |--------------------------|-------------------------------------|
-| `src/initialize.cpp`     | Runs once at boot/reset             |
-| `src/autonomous.cpp`     | Autonomous period routine           |
-| `src/opcontrol.cpp`      | Driver‑control loop                 |
-| `include/config.hpp`     | All ports & global devices declared here |
-| `build/` & `bin/`        | Auto‑generated artifacts (safe to delete) |
+| `src/main.cpp`           | Main program entry point           |
+| `src/autons.cpp`         | Autonomous routines                 |
+| `src/globals.cpp`        | Global variables and device setup  |
+| `src/helpers.cpp`        | Helper functions                    |
+| `include/`               | Header files                        |
+| `bin/` & `build/`        | Auto‑generated artifacts (safe to delete) |
 
-_Skeleton generated with `pros conduct new --skeleton adv`._
+_Built with EZ-Template for advanced chassis control._
+
+---
+
+## 💻 Local Development Setup
+
+### Installing PROS CLI
+
+1. **Install Python 3.6+** (if not already installed)
+2. **Install PROS CLI**:
+   ```bash
+   pip install pros-cli
+   ```
+3. **Install toolchain** (automatically handled by PROS CLI on first use)
+
+### VS Code Setup (Recommended)
+
+1. **Install VS Code**
+2. **Install extensions**:
+   - [PROS Extension](https://marketplace.visualstudio.com/items?itemName=sigbots.pros)
+   - [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack)
+
+### Alternative IDEs
+
+PROS projects work with any C++ IDE. The key files are:
+- `Makefile` - Build configuration
+- `project.pros` - PROS project metadata
+- `include/` and `src/` - Source code
 
 ---
 
@@ -62,9 +130,9 @@ _Skeleton generated with `pros conduct new --skeleton adv`._
 
 | Method               | Steps                                                                                                                                                 | When to use                              |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|
-| Micro‑SD card        | `pros build` → right-click `bin/hot.package.bin` → Download → copy to SD (rename to `program.bin`) → Load via Brain menu                              | Any computer—even Chromebooks             |
-| Local flash-only CLI | Install PROS CLI + VEXcom locally → clone repo → `pros upload bin/hot.package.elf`                                                                   | You have USB & can install Python         |
-| Teacher workstation / CI | GitHub Action builds & stores `program.bin`; mentor PC downloads & flashes                                                           | Centralized flashing station              |
+| Micro‑SD card        | `pros build` → copy `bin/hot.package.bin` to SD card (rename to `program.bin`) → Load via Brain menu                                                 | When USB connection isn't available     |
+| Direct USB flash    | Connect V5 brain → `pros upload`                                                                                                                      | Standard development workflow            |
+| Competition upload   | Build locally → transfer binary to competition field → flash via field control                                                                        | During competitions                      |
 
 > ⚠️ Codespaces can’t access local USB ports—choose one of the options above.
 
@@ -76,10 +144,10 @@ _Skeleton generated with `pros conduct new --skeleton adv`._
 |----------------------------|--------------------------------------------------|
 | Build project              | `pros build`                                     |
 | Clean artifacts            | `pros make clean`                                |
-| Run simulator              | `pros simulate --open`                           |
-| Generate new skeleton      | `pros conduct new . --skeleton adv --no-prompt`  |
-| Flash via USB (local)      | `pros upload bin/hot.package.elf`                |
-| Runtime logs               | `pros terminal`                                  |
+| Flash to robot             | `pros upload`                                    |
+| Open serial terminal       | `pros terminal`                                  |
+| Create new project         | `pros conduct new . --skeleton adv --no-prompt` |
+| Run simulator              | `pros simulate`                                  |
 
 ---
 
